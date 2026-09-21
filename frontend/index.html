@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Intelligent FAQ Assistant powered by Natural Language Processing." />
+  <title>FAQ Assistant — Intelligent Knowledge Base</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Main Chat Container Card -->
+    <main class="chat-card" role="region" aria-label="FAQ Chatbot Window">
+      
+      <!-- Top Hero Banner with Vibrant Gradient & Cute Mascot -->
+      <header class="hero-banner">
+        <div class="banner-left">
+          <div class="banner-title-row">
+            <span class="wave-emoji" aria-hidden="true">👋</span>
+            <h1 class="banner-title">FAQ Assistant</h1>
+          </div>
+          <p class="banner-subtitle">
+            Ask me anything about our services, billing, order shipments, accounts, or return policies.
+          </p>
+        </div>
+
+        <div class="banner-right">
+          <!-- Mascot Speech Bubble -->
+          <div class="mascot-speech-bubble" aria-hidden="true">
+            <span>How can<br />I help you<br />today?</span>
+          </div>
+
+          <!-- Cute AI Robot Mascot SVG -->
+          <div class="robot-mascot-wrapper" aria-hidden="true">
+            <!-- Sparkle Rays -->
+            <div class="mascot-sparkles">
+              <span class="sparkle sp-1"></span>
+              <span class="sparkle sp-2"></span>
+              <span class="sparkle sp-3"></span>
+              <span class="sparkle sp-4"></span>
+              <span class="sparkle sp-5"></span>
+            </div>
+            
+            <svg class="robot-mascot-svg" width="115" height="92" viewBox="0 0 115 92" fill="none">
+              <!-- Antenna -->
+              <line x1="57.5" y1="16" x2="57.5" y2="5" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+              <circle cx="57.5" cy="4.5" r="4.5" fill="#38bdf8" stroke="#ffffff" stroke-width="2" />
+              <!-- Ears -->
+              <rect x="27" y="31" width="6" height="15" rx="3" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5" />
+              <rect x="82" y="31" width="6" height="15" rx="3" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5" />
+              <!-- Head (White Rounded Chassis) -->
+              <rect x="30" y="14" width="55" height="47" rx="21" fill="#ffffff" />
+              <!-- Screen (Dark Display) -->
+              <rect x="36" y="22" width="43" height="29" rx="13" fill="#0f172a" />
+              <!-- Smiling Blue Digital Eyes -->
+              <path d="M44 38 Q48 31 52 38" stroke="#38bdf8" stroke-width="3.2" stroke-linecap="round" fill="none" />
+              <path d="M63 38 Q67 31 71 38" stroke="#38bdf8" stroke-width="3.2" stroke-linecap="round" fill="none" />
+              <!-- Pink Blush -->
+              <circle cx="43" cy="43" r="2.5" fill="#f43f5e" opacity="0.65" />
+              <circle cx="72" cy="43" r="2.5" fill="#f43f5e" opacity="0.65" />
+              <!-- Body Shoulders -->
+              <path d="M41 62 Q57.5 59 74 62 L78 78 Q57.5 83 37 78 Z" fill="#ffffff" opacity="0.95" />
+            </svg>
+          </div>
+        </div>
+      </header>
+
+      <!-- Popular Topics Card Strip -->
+      <section class="topics-card-section" aria-label="Frequently asked question topics">
+        <div class="topics-header">
+          <div class="topics-title">
+            <span class="fire-icon" aria-hidden="true">🔥</span>
+            <span>Popular Topics</span>
+          </div>
+          <div class="topics-actions">
+            <button id="clearChatBtn" class="clear-chat-link" title="Clear conversation history">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+              </svg>
+              <span>Clear</span>
+            </button>
+            <button id="viewFaqsBtn" class="view-all-link" title="Browse full knowledge base directory">
+              <span>View All</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="quickChipsContainer" class="topics-grid">
+          <!-- 1. Payment Methods (Blue) -->
+          <button class="topic-chip suggestion-chip chip-blue" data-query="What payment methods do you accept?">
+            <div class="chip-icon-box icon-blue">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                <line x1="2" y1="10" x2="22" y2="10"></line>
+              </svg>
+            </div>
+            <span class="chip-text">Payment Methods</span>
+          </button>
+
+          <!-- 2. Password Reset (Purple) -->
+          <button class="topic-chip suggestion-chip chip-purple" data-query="How can I reset my password?">
+            <div class="chip-icon-box icon-purple">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <span class="chip-text">Password Reset</span>
+          </button>
+
+          <!-- 3. Track Order (Green) -->
+          <button class="topic-chip suggestion-chip chip-green" data-query="How can I track my order?">
+            <div class="chip-icon-box icon-green">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <span class="chip-text">Track Order</span>
+          </button>
+
+          <!-- 4. Return & Refund (Orange) -->
+          <button class="topic-chip suggestion-chip chip-orange" data-query="What is your refund policy?">
+            <div class="chip-icon-box icon-orange">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+              </svg>
+            </div>
+            <span class="chip-text">Return &amp; Refund</span>
+          </button>
+
+          <!-- 5. Human Support (Pink) -->
+          <button class="topic-chip suggestion-chip chip-pink" data-query="How do I contact customer support?">
+            <div class="chip-icon-box icon-pink">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <span class="chip-text">Human Support</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Messages Stream Area -->
+      <section id="chatMessages" class="chat-messages" role="log" aria-live="polite" aria-label="Chat Conversation">
+        <!-- Decorative background elements -->
+        <div class="chat-bg-decorations" aria-hidden="true">
+          <div class="bg-dot-grid"></div>
+          <div class="bg-sparkle-accent"></div>
+          <div class="bg-soft-wave"></div>
+        </div>
+
+        <!-- Initial Welcome Message -->
+        <div class="message-wrapper bot-wrapper">
+          <div class="avatar-robot-round" aria-hidden="true">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+              <rect width="38" height="38" rx="19" fill="#2563eb" />
+              <!-- Inner Antenna -->
+              <circle cx="19" cy="9" r="2" fill="#38bdf8" />
+              <line x1="19" y1="11" x2="19" y2="13" stroke="#ffffff" stroke-width="1.5" />
+              <!-- Face chassis -->
+              <rect x="10" y="13" width="18" height="15" rx="6" fill="#ffffff" />
+              <rect x="12" y="15" width="14" height="10" rx="4" fill="#0f172a" />
+              <path d="M14 21 Q15.5 18 17 21" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" fill="none" />
+              <path d="M21 21 Q22.5 18 24 21" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" fill="none" />
+            </svg>
+          </div>
+          <div class="message-bubble bot-bubble">
+            <div class="bubble-header">
+              <span class="sender-name">Assistant</span>
+              <span class="live-dot-time">
+                <span class="live-green-dot"></span> Just now
+              </span>
+            </div>
+            <div class="bubble-content">
+              <p>Hello! I am your FAQ Assistant. Ask me anything about our services, billing, order shipments, accounts, or return policies.</p>
+              <p class="bubble-subtext">You can type naturally or select any of the suggested topics above.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Typing Indicator -->
+      <div id="typingIndicator" class="typing-indicator hidden" aria-live="polite" aria-label="Assistant is analyzing your question">
+        <div class="avatar-robot-round small" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 38 38" fill="none">
+            <rect width="38" height="38" rx="19" fill="#2563eb" />
+            <rect x="10" y="13" width="18" height="15" rx="6" fill="#ffffff" />
+            <rect x="12" y="15" width="14" height="10" rx="4" fill="#0f172a" />
+            <path d="M14 21 Q15.5 18 17 21" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" fill="none" />
+            <path d="M21 21 Q22.5 18 24 21" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" fill="none" />
+          </svg>
+        </div>
+        <div class="typing-bubble">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+        </div>
+      </div>
+
+      <!-- Input Footer Floating Card -->
+      <footer class="chat-footer">
+        <form id="chatForm" class="input-form" novalidate>
+          <!-- Lightbulb Feature Icon -->
+          <div class="input-bulb-badge" title="AI FAQ Assistant Ready" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+              <path d="M9 18h6"></path>
+              <path d="M10 22h4"></path>
+            </svg>
+          </div>
+
+          <div class="input-container">
+            <input
+              type="text"
+              id="userInput"
+              class="chat-input"
+              placeholder="Ask a question (e.g. 'How can I pay?', 'Where is my order?')..."
+              maxlength="500"
+              autocomplete="off"
+              aria-label="Your question"
+              required
+            />
+            <div class="input-meta">
+              <span id="charCount" class="char-count" aria-live="polite">0/500</span>
+            </div>
+          </div>
+
+          <!-- Circular Gradient Send Button -->
+          <button type="submit" id="sendBtn" class="send-btn-circle" title="Send question" aria-label="Send question">
+            <svg id="sendIcon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            <span id="sendSpinner" class="spinner hidden" aria-hidden="true"></span>
+          </button>
+        </form>
+        <div id="inputFeedback" class="input-feedback hidden" role="alert"></div>
+      </footer>
+    </main>
+
+    <!-- Modal for Knowledge Base Directory -->
+    <div id="faqModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div>
+            <h2 id="modalTitle" class="modal-title">Knowledge Base Directory</h2>
+            <p class="modal-desc">Browse all pre-indexed questions and categories.</p>
+          </div>
+          <button id="closeModalBtn" class="btn-close" aria-label="Close dialog">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div id="modalCategoryFilters" class="modal-filters">
+          <!-- Populated by JS -->
+        </div>
+        <div id="modalFaqList" class="modal-faq-list">
+          <div class="loading-placeholder">Loading questions...</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

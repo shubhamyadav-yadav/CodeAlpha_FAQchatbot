@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "category": "Payment & Billing",
+    "question": "What payment methods do you accept?",
+    "answer": "We accept all major credit and debit cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, Google Pay, and direct bank wire transfers for enterprise accounts.",
+    "keywords": ["payment", "methods", "pay", "pay for items", "purchase", "credit card", "debit card", "paypal", "apple pay", "payment options"]
+  },
+  {
+    "id": 2,
+    "category": "Payment & Billing",
+    "question": "How do I update my billing information or credit card on file?",
+    "answer": "You can update your billing details anytime by navigating to 'Account Settings' > 'Billing & Payments' and clicking 'Edit Payment Method'. Changes take effect immediately.",
+    "keywords": ["billing", "credit card", "update payment", "change card", "billing address", "card on file"]
+  },
+  {
+    "id": 3,
+    "category": "Payment & Billing",
+    "question": "Where can I download my payment receipts and tax invoices?",
+    "answer": "Invoices and receipts can be downloaded in PDF format directly from your 'Billing History' tab under 'Account Settings'. An email copy is also automatically sent upon each transaction.",
+    "keywords": ["receipt", "invoice", "download bill", "tax invoice", "billing history", "get invoice"]
+  },
+  {
+    "id": 4,
+    "category": "Account & Security",
+    "question": "How can I reset or change my account password?",
+    "answer": "To reset your password, click 'Forgot Password' on the login page, enter your registered email address, and follow the secure reset link sent to your inbox.",
+    "keywords": ["password", "reset password", "forgot password", "change password", "recover password", "login help"]
+  },
+  {
+    "id": 5,
+    "category": "Account & Security",
+    "question": "How do I enable Two-Factor Authentication (2FA) for extra security?",
+    "answer": "Head to 'Account Settings' > 'Security', toggle on 'Two-Factor Authentication', and scan the QR code using any authenticator app like Google Authenticator or Authy.",
+    "keywords": ["2fa", "turn on 2fa", "enable 2fa", "setup 2fa", "two-factor authentication", "security", "authenticator", "mfa"]
+  },
+  {
+    "id": 6,
+    "category": "Account & Security",
+    "question": "How can I permanently delete or deactivate my account?",
+    "answer": "To delete your account, visit 'Account Settings' > 'Privacy & Data' > 'Delete Account'. Please note that account deletion is permanent and will remove all saved data within 30 days.",
+    "keywords": ["delete account", "deactivate account", "close account", "remove profile"]
+  },
+  {
+    "id": 7,
+    "category": "Orders & Tracking",
+    "question": "How can I track my order status and shipment?",
+    "answer": "Once your order has shipped, you will receive a tracking number via email. You can also view live tracking updates by clicking 'Track Order' in the 'My Orders' section of your profile.",
+    "keywords": ["track order", "order status", "shipment tracking", "track shipment", "where is my order", "where is my package", "package location"]
+  },
+  {
+    "id": 8,
+    "category": "Orders & Tracking",
+    "question": "Can I cancel or modify my order after placing it?",
+    "answer": "Orders can be modified or cancelled within 60 minutes of placement. After this window, our warehouse begins fulfillment, and you will need to request a return once received.",
+    "keywords": ["cancel order", "modify order", "change order", "stop delivery", "cancel item"]
+  },
+  {
+    "id": 9,
+    "category": "Shipping & Delivery",
+    "question": "What are your standard shipping options and delivery times?",
+    "answer": "Standard shipping takes 3-5 business days, expedited shipping takes 2 business days, and overnight priority shipping delivers the next business day for orders placed before 2 PM EST.",
+    "keywords": ["shipping time", "delivery time", "shipping options", "how long does shipping take", "expedited shipping", "how long to ship"]
+  },
+  {
+    "id": 10,
+    "category": "Shipping & Delivery",
+    "question": "Do you offer international shipping outside the United States?",
+    "answer": "Yes, we ship to over 60 countries worldwide. International shipping typically takes 7-14 business days, and applicable customs duties or import taxes are calculated during checkout.",
+    "keywords": ["international shipping", "ship internationally", "worldwide delivery", "ship abroad", "customs", "global shipping", "canada", "uk"]
+  },
+  {
+    "id": 11,
+    "category": "Returns & Refunds",
+    "question": "What is your refund policy and how do I request a refund?",
+    "answer": "We offer a 30-day money-back guarantee on all eligible items. To request a refund, submit a return ticket through our Returns Portal with your order ID and reason for return.",
+    "keywords": ["refund policy", "get money back", "request refund", "reimbursement", "refund process"]
+  },
+  {
+    "id": 12,
+    "category": "Returns & Refunds",
+    "question": "How long does it take for a refund to show up in my bank account?",
+    "answer": "Once your returned item is inspected and approved, refunds are processed within 3-5 business days. Depending on your financial institution, it may take an additional 2-7 days to post.",
+    "keywords": ["refund time", "when do i get refund", "refund pending", "receive my refund", "bank processing"]
+  },
+  {
+    "id": 13,
+    "category": "Returns & Refunds",
+    "question": "Are return shipping labels free or do I pay for returns?",
+    "answer": "Return shipping is completely free for defective, damaged, or incorrect items. For standard remorse returns, a flat return label fee of $5.99 is deducted from your refund amount.",
+    "keywords": ["return label", "free return", "return cost", "shipping fee return"]
+  },
+  {
+    "id": 14,
+    "category": "Subscription & Pricing",
+    "question": "How do I upgrade, downgrade, or cancel my premium subscription plan?",
+    "answer": "Go to 'Account Settings' > 'Subscription Plans' and select 'Change Plan' or 'Cancel Subscription'. If you cancel, your premium benefits will remain active until the end of your billing cycle.",
+    "keywords": ["upgrade plan", "cancel subscription", "downgrade plan", "subscription renewal"]
+  },
+  {
+    "id": 15,
+    "category": "Subscription & Pricing",
+    "question": "Do you offer a free trial or student discount for plans?",
+    "answer": "Yes! We provide a 14-day full-feature free trial with no credit card required. Verified college students and non-profit organizations also receive a 25% recurring discount.",
+    "keywords": ["free trial", "student discount", "education discount", "try free", "trial period"]
+  },
+  {
+    "id": 16,
+    "category": "Support & Services",
+    "question": "How can I contact human customer support?",
+    "answer": "You can reach our human support team via live chat Monday through Friday 8 AM - 8 PM EST, by emailing support@example.com, or by calling our toll-free hotline at 1-800-555-0199.",
+    "keywords": ["contact support", "talk to human", "real person", "customer service", "agent", "phone number", "email support"]
+  },
+  {
+    "id": 17,
+    "category": "Support & Services",
+    "question": "What are your customer support operating hours?",
+    "answer": "Our live chat and phone agents are available Monday through Friday from 8:00 AM to 8:00 PM EST, and Saturdays from 9:00 AM to 5:00 PM EST. Email tickets are monitored 24/7.",
+    "keywords": ["support hours", "operating hours", "business hours", "when are you open", "weekend support"]
+  },
+  {
+    "id": 18,
+    "category": "Security & Privacy",
+    "question": "How do you protect and handle my personal and payment data?",
+    "answer": "All user data is encrypted at rest using AES-256 and in transit via TLS 1.3. We are SOC2 and PCI-DSS Level 1 certified and never sell or rent your personal information to third parties.",
+    "keywords": ["data privacy", "data security", "pci compliant", "gdpr", "is my data safe", "encryption"]
+  }
+]

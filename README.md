@@ -184,7 +184,25 @@ python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
 
 ---
 
-## 8. Running Automated Tests
+## 8. Deployment on Vercel
+
+The repository is configured for zero-friction Vercel deployment using `@vercel/python` serverless functions and static frontend routing:
+
+### Option A: 1-Click Import via Vercel Dashboard (Recommended)
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Connect your GitHub account and select repository: `shubhamyadav-yadav/CodeAlpha_FAQchatbot`.
+3. Keep default settings (Vercel automatically detects `vercel.json` and `api/index.py`).
+4. Click **Deploy**.
+
+### Option B: Deploy via Vercel CLI
+```bash
+vercel
+```
+Follow the interactive prompts to link your project and deploy.
+
+---
+
+## 9. Running Automated Tests
 
 Run the complete test suite using `pytest`:
 
@@ -206,7 +224,7 @@ python backend/tests/live_test.py
 
 ---
 
-## 9. Security Review
+## 10. Security Review
 
 - [x] **XSS Prevention**: Frontend strictly renders user and bot messages using `document.createElement()` and `.textContent`. No raw HTML injection is permitted.
 - [x] **Input Validation**: Rejects empty strings, whitespace-only queries, and queries exceeding 500 characters with HTTP 422.
@@ -216,7 +234,7 @@ python backend/tests/live_test.py
 
 ---
 
-## 10. System Limitations
+## 11. System Limitations
 
 - **Knowledge Boundary**: The chatbot is specifically designed for FAQ question-answering based on the supplied knowledge base (`backend/app/data/faqs.json`). It does not generate conversational dialogue outside this scope.
 - **Extreme Paraphrasing**: Queries with heavily distorted misspellings or abstract metaphors not present in the vocabulary may fall below the 0.30 similarity threshold, safely triggering the fallback response.
